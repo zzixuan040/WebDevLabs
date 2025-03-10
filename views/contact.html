@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Zixuan Zhou">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Zixuan Zhou professional website">
+    <title>Zixuan Zhou - Contact Me</title>
+    <style>
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+    </style>
+</head>
+<body style="font-family: Arial;">
+    <header style="color: rgb(101, 31, 87); background: lightblue;">
+        <h1>Zixuan Zhou</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="fun.html">For Fun</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <!-- Name input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <!-- Email input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <!-- Comment textarea -->
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br>
+
+            <!-- New radio button input -->
+            <label>How did you hear about me?</label><br>
+            <input type="radio" id="referral" name="source" value="Referral">
+            <label for="referral">Referral</label><br>
+            <input type="radio" id="search" name="source" value="Search Engine">
+            <label for="search">Search Engine</label><br>
+            <input type="radio" id="social" name="source" value="Social Media">
+            <label for="social">Social Media</label><br><br>
+
+            <!-- New select dropdown -->
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Job Opportunities">Job Opportunities</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h3>My Contact</h3>
+        <form>
+            <label>Email:</label>
+            <p>zixuanz3@andrew.cmu.edu</p>
+                
+            <label>Phone:</label>
+            <p>+1 (412) 996-7947</p>
+                
+            <label>LinkedIn:</label>
+            <p><a href="https://www.linkedin.com/in/chloe-zhou7947/">Click here to visit my LinkedIn</a></p>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Zixuan Zhou. All rights reserved.</p>
+    </footer>
+</body>
+</html>
