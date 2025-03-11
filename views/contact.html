@@ -4,7 +4,8 @@
     <meta name="author" content="Zixuan Zhou">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Zixuan Zhou professional website">
-    <title>Zixuan Zhou - Contact Me</title>
+    <title>Zixuan Zhou - Contact</title>
+    <link rel="stylesheet" href="../static/style.css">
     <style>
         nav ul {
             list-style: none;
@@ -17,16 +18,20 @@
             display: inline;
         }
     </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: Arial;">
-    <header style="color: rgb(101, 31, 87); background: lightblue;">
-        <h1>Zixuan Zhou</h1>
+<body>
+    <header>
+        <h1 id="webname">Zixuan Zhou</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="fun.html">For Fun</a></li>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="fun.html">Fun</a></li>
+                <li><a href="cv.html">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -34,19 +39,15 @@
     <div class="main">
         <h2>Contact Me</h2>
         <form action="#" method="post">
-            <!-- Name input -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
             
-            <!-- Email input -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
             
-            <!-- Comment textarea -->
             <label for="comment">Comment:</label><br>
             <textarea id="comment" name="comment" rows="4" required></textarea><br>
 
-            <!-- New radio button input -->
             <label>How did you hear about me?</label><br>
             <input type="radio" id="referral" name="source" value="Referral">
             <label for="referral">Referral</label><br>
@@ -55,7 +56,6 @@
             <input type="radio" id="social" name="source" value="Social Media">
             <label for="social">Social Media</label><br><br>
 
-            <!-- New select dropdown -->
             <label for="subject">Subject:</label>
             <select id="subject" name="subject">
                 <option value="General Inquiry">General Inquiry</option>
@@ -63,7 +63,7 @@
                 <option value="Job Opportunities">Job Opportunities</option>
             </select><br><br>
 
-            <input type="submit" value="Submit">
+            <button type="submit">Submit</button>
         </form>
         
         <h3>My Contact</h3>
