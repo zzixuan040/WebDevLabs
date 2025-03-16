@@ -70,14 +70,13 @@ function greetingFunc() {
         greetingMessage = "Good night";
     }
 
-    window.onload = function () {
-        if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
-            let E = document.getElementById("greeting");
-            if (E) {
-                E.innerHTML = `${greetingMessage}, my name is Chloe Zhou.`;
-            }
+
+    if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+        let E = document.getElementById("greeting");
+        if (E) {
+            E.innerHTML = `${greetingMessage}, my name is Chloe Zhou.`;
         }
-    };
+    }
 }
 
 greetingFunc();
