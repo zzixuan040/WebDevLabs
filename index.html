@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="./static/script.js" defer></script>
     <meta name="author" content="Zixuan Zhou">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Zixuan Zhou professional website">
     <title>Zixuan Zhou</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="./static/script.js"></script>
+
     <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">    
+
     <style>
         nav ul {
             list-style: none;
@@ -19,13 +26,8 @@
             display: inline;
         }
     </style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">    
-
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
@@ -41,11 +43,24 @@
     <div class="main">
         <h2 id="greeting">Loading...</h2>
         <img src="static/profile.jpg" alt="Zixuan Zhou" width="200">
-        <p id="intro">Welcome to my professional website. As an honored student at Tepper, I work to make impacts.</p>
+        
+        <p id="shortBio">
+            Welcome to my professional website. I am passionate about technology and innovation.
+        </p>
+        
+        <p id="fullBio" style="display: none;">
+            Welcome to my professional website. I am passionate about technology and innovation. 
+            With a background in Information Systems at Carnegie Mellon University, I explore 
+            cutting-edge solutions in business, AI, and data science. My goal is to create meaningful 
+            impacts through technology and collaboration.
+        </p>
+        
+        <button id="readMoreBtn">Read More</button>
+        <button id="readLessBtn" style="display: none;">Read Less</button>
     </div>
     
     <footer>
-        <p>&copy; 2025 Zixuan Zhou. All rights reserved.</p>
+        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
     </footer>
 </body>
 </html>

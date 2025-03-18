@@ -39,8 +39,8 @@ function findTheBanana(arr) {
     }
 }
 
-findTheBanana(L1);
-findTheBanana(L2);
+//findTheBanana(L1);
+//findTheBanana(L2);
 
 // Step 8: forEach Loop for the Same Functionality
 function findTheBanana(arr) {
@@ -51,8 +51,8 @@ function findTheBanana(arr) {
     });
 }
 
-findTheBanana(L1);
-findTheBanana(L2);
+//findTheBanana(L1);
+//findTheBanana(L2);
 
 // Step 9: DOM
 function greetingFunc() {
@@ -70,13 +70,84 @@ function greetingFunc() {
         greetingMessage = "Good night";
     }
 
+    document.getElementById("greeting").innerHTML = `${greetingMessage}, my name is Chloe Zhou.`
+}
+greetingFunc()
 
-    if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
-        let E = document.getElementById("greeting");
-        if (E) {
-            E.innerHTML = `${greetingMessage}, my name is Chloe Zhou.`;
-        }
+
+// Footer with current year
+function addYear() {
+    let currentYear = new Date().getFullYear();
+    document.getElementById("copyYear").innerText = currentYear;
+}
+
+// For fun.html & button
+function showList() {
+    let list = document.getElementById("funList");
+    let button = document.getElementById("revealButton");
+
+    if (list && button) {
+        list.style.display = "block";  
+        button.style.display = "none";
     }
 }
 
-greetingFunc();
+// Bio index.html Read More and Read Less
+$(document).ready(function() {
+    $("#readMoreBtn").click(function() {
+        $("#shortBio").hide();
+        $("#fullBio").show();
+        $("#readMoreBtn").hide();
+        $("#readLessBtn").show();
+    });
+
+    $("#readLessBtn").click(function() {
+        $("#fullBio").hide();
+        $("#shortBio").show();
+        $("#readMoreBtn").show();
+        $("#readLessBtn").hide();
+    });
+});
+
+
+// API check Contact Me Validation
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        let isValid = true;
+
+        // Name
+        let name = document.getElementById("name");
+        let nameError = document.getElementById("nameError");
+        if (!name.checkValidity()) {
+            nameError.textContent = "Please enter your name.";
+            isValid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        // Email
+        let email = document.getElementById("email");
+        let emailError = document.getElementById("emailError");
+        if (!email.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        // Comment
+        let comment = document.getElementById("comment");
+        let commentError = document.getElementById("commentError");
+        if (!comment.checkValidity()) {
+            commentError.textContent = "Please enter a message.";
+            isValid = false;
+        } else {
+            commentError.textContent = "";
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});

@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
@@ -40,17 +40,21 @@
     
     <div class="main">
         <h2>Things I Love to Do for Fun</h2>
-        <ul>
+
+        <button id="revealButton" onclick="showList()">Click to see...</button>
+    
+        <ul id="funList" style="display: none;">
             <li>Playing Pipa</li>
             <li>Taking my cat for a walk</li>
             <li>Making lattes with my espresso machine</li>
             <li>Trying out new recipes and cooking</li>
             <li>Going to the gym</li>
         </ul>
-    </div>
+    </div>    
     
     <footer>
-        <p>&copy; 2025 Zixuan Zhou. All rights reserved.</p>
+        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
     </footer>
+    
 </body>
 </html>

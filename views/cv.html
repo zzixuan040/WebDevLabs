@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
@@ -70,7 +70,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2025 Zixuan Zhou. All rights reserved.</p>
+        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
     </footer>
 </body>
 </html>

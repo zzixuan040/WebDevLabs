@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
@@ -39,31 +39,19 @@
     
     <div class="main">
         <h2>Contact Me</h2>
-        <form action="#" method="post">
+        <form id="contactForm" action="#" method="post">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="nameError"></span><br>
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span><br>
             
             <label for="comment">Comment:</label><br>
-            <textarea id="comment" name="comment" rows="4" required></textarea><br>
-
-            <label>How did you hear about me?</label><br>
-            <input type="radio" id="referral" name="source" value="Referral">
-            <label for="referral">Referral</label><br>
-            <input type="radio" id="search" name="source" value="Search Engine">
-            <label for="search">Search Engine</label><br>
-            <input type="radio" id="social" name="source" value="Social Media">
-            <label for="social">Social Media</label><br><br>
-
-            <label for="subject">Subject:</label>
-            <select id="subject" name="subject">
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Feedback">Feedback</option>
-                <option value="Job Opportunities">Job Opportunities</option>
-            </select><br><br>
-
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+            <span class="error-message" id="commentError"></span><br>
+        
             <button type="submit">Submit</button>
         </form>
         
@@ -81,7 +69,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2025 Zixuan Zhou. All rights reserved.</p>
+        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
     </footer>
 </body>
 </html>
