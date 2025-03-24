@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../static/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Zixuan Zhou">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Zixuan Zhou professional website">
-    <title>Zixuan Zhou - Resume</title>
+    <title>Zixuan Zhou</title>
     <link rel="stylesheet" href="../static/style.css">
-    <style>
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 15px;
-        }
-        nav ul li {
-            display: inline;
-        }
-    </style>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="../static/script.js"></script>
     
 </head>
-<body onload="addYear()">
+<body onload=" addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
-            <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="fun.html">Fun</a></li>
-                <li><a href="cv.html">Resume</a></li>
-            </ul>
+            <a href="../index.html">about</a>
+            <a href="cv.html">resume</a>
+            <a href="fun.html">play</a>
+            <a href="contact.html">contact</a>
         </nav>
     </header>
-    
     <div class="main">
         <h2>Curriculum Vitae</h2>
         <table>
@@ -56,21 +45,16 @@
             <tr>
                 <td>Skills</td>
                 <td>Communication, relationship-building, project management</td>
-            </tr>
-            <tr>
-                <td>Certifications</td>
-                <td>Google Analytics, CFA Level 1</td>
-            </tr>
+            </tr>            
             <tr>
                 <td>Projects</td>
                 <td>Sports data analysis, machine learning, corporate finance simulation</td>
             </tr>
         </table>
-        <p><a href="../static/Zixuan_Zhou_Resume.pdf" target="_blank">Download my Resume (PDF)</a></p>
+        <a href="../static/Zixuan_Zhou_Resume.pdf" target="_blank">My resume (pdf)</a>
     </div>
-    
-    <footer>
-        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
+    <footer>        
+        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by Zixuan Zhou &copy; </p>
     </footer>
 </body>
 </html>

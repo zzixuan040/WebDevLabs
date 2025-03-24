@@ -8,64 +8,110 @@
     margin: 5px;
 }
 
+header {
+    color: white;
+}
+
 #webname {
-    color: #2A3D66;
     background-color: #92ad70;
-    padding: 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #37474F;
     margin-right: 15px;
-    font-weight: bold;
+    color:#92ad70;
 }
 
 th {
-    padding: 12px 0;
-    background-color: #4A90E2;
+    padding: 12px;
+    background-color: darkgray;
     color: white;
     width: fit-content;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
+ }
+ 
+ table tr:nth-child(even) {
+    background-color: lightgray;
+ }
+ 
 form * {
     display: block;
     margin: auto;
     text-align: center;
 }
 
-button[type="submit"] {
-    background-color: #4CAF50;
+input[type="submit"] {
+    background-color: #92ad70;
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#fullBio {
-    display: none;
-}
-
-button {
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
+    padding: 10px;
     border-radius: 5px;
-    margin-top: 10px;
 }
 
-.error-message {
-    color: red;
-    font-size: 14px;
+/*  #FavList { */
+    /* display: none;*/
+/* }*/
+
+ #SeeMoreBTN{
+    background-color: lightgrey;
+    border: 0px;
+    border-radius: 16px;
+    font-size:large;
+ }
+
+ #shortIntro {
     display: block;
-    margin-top: 5px;
+ }
+ 
+ #readLess, #longIntro {
+    display: none;
+ }
+ 
+ #readLess, #readMore {
+    font-style: italic;
+    background-color: lightgrey;
+ }
+ 
+ #ValidateMsg {
+    width: max-content;
+    margin: auto;
+ }
+
+.funIMG {
+    border-radius: 100%;
+    width: 20%;
 }
 
+.container {
+    display: inline-block; /* Makes the container only as wide as its content */
+    border-radius: 10%; /* Rounds the corners of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
 
+.container button {
+    padding: 10px 15px; /* Adds space inside the button for better readability */
+    border: none; /* Removes the default border */
+    background-color: #92ad70; /* Sets a greenish background color */
+    color: white; /* Makes the button text white */
+    font-size: 16px; /* Increases the font size for better visibility */
+    border-radius: 5px; /* Slightly rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.container button:hover {
+    background-color: darkgrey; /* Changes the background color when hovered */
+}
+
+.mainLayout {
+    display: flex; /* Enables Flexbox layout for the container */
+    flex-wrap: wrap; /* Allows child elements to wrap onto new lines */
+    flex-direction: row; /* Aligns child elements in a horizontal row */
+    
+}
+
+.item1, .item2 {
+    flex: 1;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

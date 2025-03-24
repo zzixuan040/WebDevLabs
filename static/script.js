@@ -1,153 +1,191 @@
-// Step 4: Variable Declarations
-let x = 5;
-let y = 7;
-let z = x + y;
+// Basic JavaScript Statement
+var x = 5;
+var y = 7;
+var z = x + y;
 console.log(z);
 
-let A = "Hello ";
-let B = "world!";
-let C = A + B;
+var A = 'Hello';
+var B = ' world!';
+var C = A + B;
 console.log(C);
 
-// Step 5: Function Definition
+// Basic JavaScript Function
 function SumNPrint(x1, x2) {
-    let x3 = x1 + x2;
+    var x3 = x1 + x2;
     console.log(x3);
-}
+ }
+ SumNPrint(x,y);
+ SumNPrint(A,B);
 
-SumNPrint(x, y);
-SumNPrint(A, B);
-
-// Step 6: Conditional Check
-if (C.length > z) {
+ // Conditional Statement
+ if (C.length > z) {
     console.log(C);
-} else if (C.length < z) {
+ } else if (z > C.length) {
     console.log(z);
-} else {
+ } else {
     console.log("good job!");
-}
+ }
 
-// Step 7: Array and Loop
-let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
+/*
+// For Loop
+// Define two arrays containing fruit names
+var L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
+var L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 
-function findTheBanana(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === "Banana") {
-            alert("found the Banana in 3!");
+// Function to find "Banana" using a for loop
+function findTheBanana(array) {
+    // Loop through each item in the array
+    for (let index = 0; index < array.length; index++) {
+        // Check if the current element is "Banana"
+        if (array[index] === "Banana") {
+            // Show an alert with the index where "Banana" was found
+            alert("found the Banana in index " + index);
         }
     }
 }
 
-//findTheBanana(L1);
-//findTheBanana(L2);
+// Call the function for both arrays
+findTheBanana(L1);
+findTheBanana(L2);
 
-// Step 8: forEach Loop for the Same Functionality
-function findTheBanana(arr) {
-    arr.forEach(item => {
-        if (item === "Banana") {
-            alert("we found a Banana in the array");
-        }
-    });
-}
+// Using a forEach loop to check for "Banana" in L1 and L2
+L1.forEach((element, index) => {
+    if (element === "Banana") {
+        alert("We found a banana in the first array at index " + index);
+    }
+});
 
-//findTheBanana(L1);
-//findTheBanana(L2);
+L2.forEach((element, index) => {
+    if (element === "Banana") {
+        alert("We found a banana in the second array at index " + index);
+    }
+});
 
-// Step 9: DOM
+
+
+// Conditional Date Greeting for Console
 function greetingFunc() {
-    let d = new Date();
-    let h = d.getHours();
-    let greetingMessage = "";
+    var d = new Date();  // Create a new Date object to get the current time
+    var h = d.getHours();  // Get the current hour (0-23)
 
-    if (h < 12) {
-        greetingMessage = "Good morning";
-    } else if (h < 18) {
-        greetingMessage = "Good afternoon";
-    } else if (h < 20) {
-        greetingMessage = "Good evening";
-    } else {
-        greetingMessage = "Good night";
+    if (h>=5 && h<12) {
+        console.log("Good morning!"); // Morning greeting (5 AM - 11:59 AM)
+    } else if (h>=12 && h<18) {
+        console.log("Good afternoon!"); // Afternoon greeting (12 PM - 5:59 PM)
+    } else if (h>=18 && h<20) {
+        console.log("Good evening!"); // Evening greeting (6 PM - 7:59 PM)
+    } else if (h>=20 && h<24 ||  h<5) {
+        console.log("Good night!"); // Night greeting (8 PM - 4:59 AM)
     }
+ }
+greetingFunc();
+*/
 
-    document.getElementById("greeting").innerHTML = `${greetingMessage}, my name is Chloe Zhou.`
+ /*
+// Conditional Date Greeting for Broswer
+function greetingFunc() {
+    var d = new Date();  // Create a new Date object to get the current time
+    var h = d.getHours();  // Get the current hour (0-23)
+    var E = document.getElementById("greeting");  // Select the HTML element with ID "greeting"
+
+ // Check the time and update the greeting accordingly
+    if (h >= 5 && h < 12) {  
+        E.innerHTML = "Good morning, my name is your name.";  // Morning greeting (5 AM - 11:59 AM)
+    } else if (h >= 12 && h < 18) {  
+        E.innerHTML = "Good afternoon, my name is your name.";  // Afternoon greeting (12 PM - 5:59 PM)
+    } else if (h >= 18 && h < 20) {  
+        E.innerHTML = "Good evening, my name is your name.";  // Evening greeting (6 PM - 7:59 PM)
+    } else {  
+        E.innerHTML = "Good night, my name is your name.";  // Night greeting (8 PM - 4:59 AM)
+    } 
 }
-greetingFunc()
+greetingFunc();
+*/
 
 
-// Footer with current year
+// Conditional Date Greeting for index.html ONLY
+
+// Function to display a time-based greeting
+function greetingFunc() {
+    var d = new Date();  // Create a new Date object to get the current time
+    var h = d.getHours();  // Get the current hour (0-23)
+    var E = document.getElementById("greeting");  // Select the HTML element with ID "greeting"
+
+    // Check the time and update the greeting accordingly
+    if (h >= 5 && h < 12) {  
+        E.innerHTML = "Good morning, my name is Zixuan Zhou.";  // Morning greeting (5 AM - 11:59 AM)
+    } else if (h >= 12 && h < 18) {  
+        E.innerHTML = "Good afternoon, my name is Zixuan Zhou.";  // Afternoon greeting (12 PM - 5:59 PM)
+    } else if (h >= 18 && h < 20) {  
+        E.innerHTML = "Good evening, my name is Zixuan Zhou.";  // Evening greeting (6 PM - 7:59 PM)
+    } else {  
+        E.innerHTML = "Good night, my name is Zixuan Zhou.";  // Night greeting (8 PM - 4:59 AM)
+    } 
+}
+
+// Get the current page URL
+var L = window.location.href;
+console.log(L);  // Log the full URL to the console for debugging
+
+// Check if the current page is "index.html" before running the greeting function
+if (L.includes("index.html")) {  
+   greetingFunc();  // Call the function to update the greeting
+}
+
+// Get the Year for the Footer
 function addYear() {
-    let currentYear = new Date().getFullYear();
-    document.getElementById("copyYear").innerText = currentYear;
-}
+    var d = new Date(); // Creates a new Date object
+    var y = d.getFullYear(); // Extracts the current year (e.g., 2025)
+    var E = document.getElementById("copyYear"); // Finds the element with ID "copyYear"
+    E.innerHTML+=y;  // Appends the year to the existing content
+ } 
 
-// For fun.html & button
-function showList() {
-    let list = document.getElementById("funList");
-    let button = document.getElementById("revealButton");
+// Click to see button
+//function showList() {
+//    document.getElementById("FavList").style.display = "block"; // Makes the list visible
+//    document.getElementById("SeeMoreBTN").style.display = "none"; // Hides the "See More" button
+// } 
 
-    if (list && button) {
-        list.style.display = "block";  
-        button.style.display = "none";
+  // Read more and less buttons
+
+  // When the "Read Less" button is clicked
+ $("#readLess").click(function(){ 
+    $("#longIntro").hide(); // Hide the long introduction text
+    $("#readLess").hide();  // Hide the "Read Less" button itself
+    $("#readMore").show();  // Show the "Read More" button  
+
+  });
+  
+  // When the "Read More" button is clicked
+  $("#readMore").click(function(){
+    $("#longIntro").show();  // Show the long introduction text
+    $("#readLess").show();   // Show the "Read Less" button
+    $("#readMore").hide();   // Hide the "Read More" button  
+  });
+
+  // Form validation
+  function validate() {
+    // Get the input fields and validation message element by their IDs
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var userText = document.getElementById("text");
+    var msg = document.getElementById("ValidateMsg"); // Element to display validation message
+    // Check if any of the fields are invalid using checkValidity()
+    if (!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
+        // If any field is invalid, display an error message
+        msg.innerHTML = "Please fill out the form correctly so I can get back to you :)";
     }
+ } 
+
+ 
+ function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('adviceText').innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error('Error fetching advice:', error);
+            document.getElementById('adviceText').innerText = 'Sorry, could not fetch advice. Try again later!';
+        });
 }
-
-// Bio index.html Read More and Read Less
-$(document).ready(function() {
-    $("#readMoreBtn").click(function() {
-        $("#shortBio").hide();
-        $("#fullBio").show();
-        $("#readMoreBtn").hide();
-        $("#readLessBtn").show();
-    });
-
-    $("#readLessBtn").click(function() {
-        $("#fullBio").hide();
-        $("#shortBio").show();
-        $("#readMoreBtn").show();
-        $("#readLessBtn").hide();
-    });
-});
-
-
-// API check Contact Me Validation
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-        let isValid = true;
-
-        // Name
-        let name = document.getElementById("name");
-        let nameError = document.getElementById("nameError");
-        if (!name.checkValidity()) {
-            nameError.textContent = "Please enter your name.";
-            isValid = false;
-        } else {
-            nameError.textContent = "";
-        }
-
-        // Email
-        let email = document.getElementById("email");
-        let emailError = document.getElementById("emailError");
-        if (!email.checkValidity()) {
-            emailError.textContent = "Please enter a valid email address.";
-            isValid = false;
-        } else {
-            emailError.textContent = "";
-        }
-
-        // Comment
-        let comment = document.getElementById("comment");
-        let commentError = document.getElementById("commentError");
-        if (!comment.checkValidity()) {
-            commentError.textContent = "Please enter a message.";
-            isValid = false;
-        } else {
-            commentError.textContent = "";
-        }
-
-        // Prevent form submission if validation fails
-        if (!isValid) {
-            event.preventDefault();
-        }
-    });
-});

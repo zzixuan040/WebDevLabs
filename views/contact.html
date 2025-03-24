@@ -1,75 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../static/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Zixuan Zhou">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Zixuan Zhou professional website">
-    <title>Zixuan Zhou - Contact</title>
+    <title>Zixuan Zhou</title>
     <link rel="stylesheet" href="../static/style.css">
-    <style>
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 15px;
-        }
-        nav ul li {
-            display: inline;
-        }
-    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script defer src="../static/script.js"></script>
+    
 </head>
-<body onload="addYear()">
+
+<body onload=" addYear()">
     <header>
         <h1 id="webname">Zixuan Zhou</h1>
         <nav>
-            <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="fun.html">Fun</a></li>
-                <li><a href="cv.html">Resume</a></li>
-            </ul>
+            <a href="../index.html">about</a>
+            <a href="cv.html">resume</a>
+            <a href="fun.html">play</a>
+            <a href="contact.html">contact</a>
         </nav>
     </header>
     
-    <div class="main">
-        <h2>Contact Me</h2>
-        <form id="contactForm" action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <span class="error-message" id="nameError"></span><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <span class="error-message" id="emailError"></span><br>
-            
-            <label for="comment">Comment:</label><br>
-            <textarea id="comment" name="comment" rows="4" required></textarea>
-            <span class="error-message" id="commentError"></span><br>
-        
-            <button type="submit">Submit</button>
-        </form>
-        
-        <h3>My Contact</h3>
-        <form>
-            <label>Email:</label>
-            <p>zixuanz3@andrew.cmu.edu</p>
-                
-            <label>Phone:</label>
-            <p>+1 (412) 996-7947</p>
-                
-            <label>LinkedIn:</label>
-            <p><a href="https://www.linkedin.com/in/chloe-zhou7947/">Click here to visit my LinkedIn</a></p>
-        </form>
+    <div class="mainLayout">
+        <div class="item1">
+            <h2>Find Me</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.364018198979!2d-79.94797112379763!3d40.445079471435186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f58679a9f%3A0xa4dc782d726fd9ee!2sTepper%20School%20of%20Business!5e0!3m2!1sen!2sus!4v1742784226928!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="item2">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Your name (required)</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Your email (required)</label>
+                <input type="email" name="email" id="email">
+                <label for="comment">Your message (required)</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" onclick="validate()">
+            </form>
+            <p id="ValidateMsg"></p>
+
+
+        <table>
+            <tr><th>Contact Method</th><th>Description</th></tr>
+            <tr><td>Email</td><td>zixuanz3@andrew.cmu.edu</td></tr>
+            <tr><td>Phone</td><td>4129967947</td></tr>
+            <tr><td>LinkedIn</td><td>https://www.linkedin.com/in/chloe-zhou7947/</td></tr>
+        </table>
     </div>
-    
-    <footer>
-        <p>&copy; <span id="copyYear"></span> Zixuan Zhou. All rights reserved.</p>
+    <footer>        
+        <p id="copyYear">designed 🎨 and coded 👩🏻‍💻 by Zixuan Zhou &copy; </p>
     </footer>
 </body>
 </html>
